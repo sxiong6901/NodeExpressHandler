@@ -1,3 +1,2 @@
-node_moodules
-package-lock.json
-.vscode
+node_moodules/
+.vscode/
