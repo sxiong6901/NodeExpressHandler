@@ -1,5 +1,4 @@
 li {
-  
   padding: 5px;
   margin: 5px;
   list-style:none;
@@ -9,13 +8,17 @@ li {
   font-weight: bold;
 }
 
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
-}
-
 .form-group {
   margin-bottom: 5px;
 }
+
+body {
+  background-image: url("../images/Background.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: rgb(216, 0, 0);
+  background-size: 100%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 
