@@ -1,9 +1,11 @@
 <h1>Welcome to McDonald's!</h1>
 
+<h2>Burger List:</h2>
+
 <ul>
   {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block sleep=true}}
+    {{#unless eat}}
+      {{> burgers/burger-block devoured=true}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -11,22 +13,24 @@
 
 <ul>
   {{#each burgers}}
-
+    {{#if eat}}
+      {{> burgers/burger-block devoured=false}}
+    {{/if}}
   {{/each}}
 </ul>
 
-<h2>Hungry?</h2>
 <form class="create-form">
 
   <div class="form-group">
-    <label for="ca">Choose a burger:</label>
+    <label for="ca">Choose a Burger:</label>
     <input type="text" id="ca" name="name">
   </div>
 
   <div class="form-group">
-    <label>Ready to eat?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Yes, Eat!<br>
+    <label for="eat">Ready to eat?</label><br>
+    <input type="radio" name="eat" value="1" checked> YUM YUM<br>
+
   </div>
 
-  <button type="submit">I'm Loving It!</button>
+  <button type="submit">I'm Lovin' It!</button>
 </form>
